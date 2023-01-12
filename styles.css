@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #121417;
+  --primary-color: #252d37;
+  --seconodary-color: #fb7413;
+  --dark-grey: #7c8798;
+  --light-grey: #959eac;
+  --white: #fff;
+}
+
+/* BASIC CSS RESET */
+/******************************/
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+
+  font-family: "Overpass", sans-serif;
+  background-color: var(--bg-color);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+label,
+button {
+  font: inherit;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+p {
+  overflow-wrap: break-word;
+}
+
+ul {
+  list-style: none;
+}
+
+fieldset {
+  border: none;
+}
+
+/* LAYOUT */
+/******************************/
+.container {
+  min-height: 100vh;
+}
+
+.card-component {
+  background: radial-gradient(98.96% 98.96% at 50% 0%, #232a34 0%, #181e27 100%);
+  border-radius: 15px;
+  margin: 50px 0;
+  max-width: 327px;
+  min-width: 300px;
+  padding: 1.5rem 1.5rem 2rem 1.5rem;
+}
+
+.front-card {
+  text-align: left;
+}
+
+.back-card {
+  text-align: center;
+}
+
+.flex-centering-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TEXT STYLES */
+/******************************/
+.heading-1 {
+  font-size: clamp(1.5rem, 1.393rem + 0.476vw, 1.75rem);
+  font-weight: 700;
+  line-height: 35.5px;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-size: clamp(0.875rem, 0.848rem + 0.119vw, 0.9375rem);
+  line-height: 24px;
+  color: var(--light-grey);
+}
+
+.text-selected {
+  display: inline-block;
+  color: var(--seconodary-color) !important;
+  background-color: var(--primary-color);
+  border-radius: 25px;
+  padding: 5px 12px;
+  margin: 1.25rem 0;
+}
+
+/* FORM */
+/******************************/
+.rating-buttons {
+  display: flex;
+  gap: 1.125rem;
+  margin: 1.5rem 0;
+}
+
+.btn-radio {
+  height: 42px;
+  width: 42px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+
+  color: var(--dark-grey);
+  font-size: clamp(0.875rem, -5.607rem + 28.8095vw, 1rem);
+  font-weight: 700;
+}
+
+.radio {
+  display: none;
+}
+
+.btn-radio:hover {
+  background-color: var(--seconodary-color);
+  color: var(--white);
+}
+
+/* COMPONENTS */
+/******************************/
+.star {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+
+  margin-bottom: 1rem;
+}
+
+.btn {
+  width: 100%;
+  height: 45px;
+  background-color: var(--seconodary-color);
+  border: none;
+  border-radius: 25px;
+  color: var(--white);
+  font-size: clamp(0.875rem, 0.848rem + 0.119vw, 0.9375rem);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background-color: var(--white);
+  color: var(--seconodary-color);
+}
+
+.btn-again {
+  margin-top: 1rem;
+}
+
+/* TOGGLED CLASSES */
+/******************************/
+.hidden {
+  display: none;
+}
+
+.active {
+  background-color: var(--dark-grey);
+  color: var(--white);
+}
+
+/* CLASSES FOR SCREEN READER */
+/******************************/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+@media (min-width: 900px) {
+  .card-component {
+    border-radius: 30px;
+    max-width: 412px;
+    padding: 2rem;
+  }
+
+  .heading-1 {
+    margin-bottom: 7px;
+  }
+
+  .rating-buttons {
+    display: flex;
+    gap: 1.4rem;
+    margin: 1.5rem 0 2rem 0;
+  }
+
+  .btn-radio {
+    height: 51px;
+    width: 51px;
+  }
+
+  .star {
+    height: 48px;
+    width: 48px;
+
+    margin-bottom: 1.875rem;
+  }
+}
